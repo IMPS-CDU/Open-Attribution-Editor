@@ -1,0 +1,32 @@
+{
+  "name": "openattribution",
+  "version": "1.0.0",
+  "description": "Open attribution builder. Originally created by Open Washington and WA SBCTC.",
+  "main": "scripts/script.js",
+  "scripts": {
+    "build:css": "$(npm bin)/node-sass --output css scss/styles.scss | $(npm bin)/postcss --use autoprefixer -b 'last 2 versions' > css/styles.css",
+		"watch:css": "$(npm bin)/watch 'npm run build:css' scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://melvey@bitbucket.org/imps/open-attribution-builder.git"
+  },
+  "keywords": [
+    "CC",
+    "Create",
+    "Commons",
+    "Open",
+    "Attribution",
+    "Washington"
+  ],
+  "author": "Washington Online <Wa-online@sbctc.edu>",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/imps/open-attribution-builder#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "node-sass": "^3.7.0",
+    "postcss-cli": "^2.5.2",
+    "watch": "^0.18.0"
+  }
+}

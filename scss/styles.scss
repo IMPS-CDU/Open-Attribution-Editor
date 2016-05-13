@@ -1,0 +1,301 @@
+/* OPEN Attribution Builder stylesheet 
+*/
+
+$header-bg-color: #8ebac8;
+$header-bg-gradient-end: darken(desaturate(adjust-hue($header-bg-color, -0.8979), 13.2387), 15.8824);
+$header-color: white;
+$container-bg-color: #dde1e2;
+$attrib-bg-color:#7c8d93;
+$popup-bg-color: $header-bg-color;
+$control-link-color: #7C8D93;
+$width: 800px;
+
+$font-size-large: large;
+$font-size-header: xx-large;
+$font-size-section-title: $font-size-large;
+$font-size-footer: x-small;
+$font-size-popup: small;
+$font-size-popup-header: $font-size-large;
+$font-size-tagline: small;
+$font-size-section-subarea: smaller;
+$font-size-output: smaller;
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 100%;
+    text-align: left;
+}
+
+.right {
+    float:right;
+}
+
+#attrib-app-container {
+    background-color: $container-bg-color;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+    max-width:$width;
+}
+
+#attrib-header {
+    background-color: $header-bg-color;
+    background:linear-gradient(to right, $header-bg-color, $header-bg-gradient-end); 
+    margin: 5px 0 5px 0;    
+    height: 45px;
+    border-radius: 6px;
+    max-width: $width * 1.025;
+}
+
+#attrib-header-logo {
+    height:55px;
+    width:80px;
+    margin: -5px 0 0 -5px;
+    padding-right: 5px;
+    float:left;
+}
+
+
+#header-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: $font-size-header;
+    font-weight: 800;
+    color: $header-color;
+    float:left;    
+    margin: 0 0 0 5px;
+    vertical-align:middle;
+}
+
+#header-right {
+    float:right;
+}
+
+#attrib-header-links {
+    font-family: 'Oswald', sans-serif;
+    float:right;
+    margin: 18px 15px 0 10px;
+    min-height:30px;
+}
+
+#attrib-header-links a {
+    color: $header-color;
+    text-decoration:none;
+    font-size: $font-size-large;
+    font-weight:800;
+}
+
+.control-links a {
+    color: $control-link-color;
+    text-decoration:none;
+    font-size: $font-size-large;
+    font-weight:800;
+}
+
+#tagline {
+    color:black;        
+    font-size: $font-size-tagline;
+    float: left;
+    margin: 22px 10px 0 10px;
+
+}
+
+form {
+    margin: 5px 10px auto 10px;    
+}
+
+
+.section-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: $font-size-section-title;
+    margin-top: 25px;
+}
+
+.section-subarea {
+    font-size: $font-size-section-subarea;
+    margin-top: 4px;            
+}
+
+
+#attrib-footer {
+    margin: 10px 10px 0 10px;        
+    max-width:$width;
+}
+
+#attrib-footer-content, #attrib-footer-content img {
+    font-size: $font-size-footer;
+    float:right;
+    padding-top:0px
+}
+    
+
+input[type="checkbox"] {
+    display: inline-block;               
+}
+
+input[type="text"] {
+    border:0;
+    outline:0;
+    padding: 4px;
+    margin-top:4px;   
+    border-radius: 6px;
+}
+
+#LicenseListBox {
+    border:0;
+    outline:0;
+    padding: 4px;
+}
+
+
+.helpimg {
+     border:none; 
+     margin-left:5px;
+ }
+
+#attrib-output {    
+    padding: 5px 10px;
+    margin: 0;
+    width: auto;
+    border: 10px solid $attrib-bg-color;
+    background-color: $attrib-bg-color;
+    /*color:white;   */
+    border-radius: 0 0 6px 6px;    
+    font-size: $font-size-output;    
+}
+#output, #output a {
+    font-size:inherit; 
+    font-weight:normal;
+    background-color: white;                
+}
+
+#output  {            
+    margin-left:4px;
+    padding: 3px 4px 3px 4px;
+    border-radius: 6px;
+    min-width:50px;
+    color:black; 
+}
+#output a {
+    color:blue;
+}
+
+
+#output-html-outer {
+    margin-top:15px;  
+}
+#output-html {
+    border-radius: 6px;
+    margin:10px 0 0 5px;
+    padding:5px;    
+    width: 90%;
+    background-color:white;
+    color:black;        
+    border:0;
+    outline:0;   
+    font-size: $font-size-output; 
+}
+
+
+
+
+#output .highlight
+{
+    background-color:lightblue;
+    color: black;
+    font-weight:600;
+    padding:0 3px 0 3px;
+}
+
+#output::selection, #output a::selection {
+  background-color:lightblue; /* WebKit/Blink Browsers */
+  color:black;
+}
+
+#clipboard-copy {
+    font-size:small;
+    float:right;
+    padding:2px 4px 0 4px;
+}
+
+
+.rightContainer {
+    float: right;
+}
+
+.leftContainer {
+    float: left;
+   /* width: 35%; */
+}
+
+.popup_value {
+    float: left;
+    width: 99%;
+}
+
+.closeButton a {
+    font-size:medium;
+    font-weight:600;
+    top:0;
+    color: $header-color;
+    float: right;
+    width: 01%;
+}
+
+.field-prompt {
+    color:orangered;
+    padding-left: 10px;
+}
+
+#DerivUrlPrompt {
+    font-size: medium;
+}
+
+.collapsecontent {
+    padding-left: 20px;
+}
+
+#collapsible-panels .collapsecontent {
+    cursor: pointer;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAI/QAACP0B34ecTAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABVSURBVCiRY/j//z8DMmZgYOBkYGD4AMW86PIsDNgBP5RmRJdgwqEBJ6C9BkYGBob/JKj/T5YNEmhiHAwMDPehbFUGBoYvyDYw4IiH/1DMhy4/CIMVAKtkORViACT8AAAAAElFTkSuQmCC') /*../images/open_flat.png*/ no-repeat left;
+}
+
+#collapsible-panels .collapsecontent.active {
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAECAYAAAC6Jt6KAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAPIgAADyIB+qfDbQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAkSURBVAiZY2RgYPjBQDz4x8jAwPCfBA3/mUhQzMDAwMBAsgYAQUUD+/oLAAsAAAAASUVORK5CYII=') /*../images/close_flat.png*/ no-repeat left;
+}
+
+
+#popup_About { 
+    float:right; 
+     width: 300px;
+}
+
+.popup {
+    overflow: auto;
+	width: 100%;
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-size: $font-size-popup;
+    font-weight: normal;
+    width: 240px;
+    min-height: 0px;
+    background-color: $popup-bg-color;
+    color:black;    
+    padding: 10px 20px;
+    box-shadow: 0 1px 2px #303030;    
+    border-radius: 8px 8px 8px 8px;
+
+    display: none;    
+    z-index: 10;
+    }
+
+.popup header {
+    font-family: 'Oswald', sans-serif;
+    font-size: $font-size-popup-header;
+    font-weight:800;
+    /*background-color:white;*/
+    padding: 0 0 8px 0;
+    color: $header-color;
+    /*border-radius: 0px 0px 0 0;*/
+    
+}
