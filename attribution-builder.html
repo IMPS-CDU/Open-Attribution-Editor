@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attribution Builder</title>
+    <!--
+     Open Attribution Builder
+        Copyright © 2015 Washington State Board for Community and Technical Colleges
+        Released under MIT license (http://opensource.org/licenses/MIT)
+    -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/script.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:800,400" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body onload="onloadform()">
+    <form name="Course Content" id="AtributionForm" action="" method="post" onchange="return checkInput(this.form);">
+        <div id="attrib-header">
+            <img id="attrib-header-logo" src="images/open_wa_logo.png" />
+            <div id="header-title">Attribution Builder</div>
+            <div id="tagline">&nbsp;</div>
+            <div id="header-right">
+                <div id="attrib-header-links"><a href="#" id="About" class="tooltip_display">about</a></div>
+            </div>
+        </div>
+        <div id="attrib-app-container">
+            <div class="rightContainer">
+                <div id="popup_About" class="popup">
+                    <div id="About_popup" class="popup_value"></div>
+                    <div class="closeButton">
+                        <a href="#">X</a>
+                    </div>
+                </div>
+                <div title="license" onchange="changeLicense();">
+                    <div class="section-title">
+                        License
+                        <a href="#" id="License" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+
+                        <span id="LicensePrompt" class="field-prompt" style="display:none;">Please select a license</span>
+                        <div class="popup" id="popup_License">
+                            <div id="License_popup" class="popup_value"></div>
+                            <div class="closeButton">
+                                <a href="#">X</a>
+                            </div>
+                        </div>
+                    </div>
+                    <select name="License" id="LicenseListBox" size="9" onchange="onchangevalue(this);">
+                        <option selected>Choose a license...</option>
+                        <option value="CC BY">Attribution (CC BY)</option>
+                        <option value="CC BY-SA">Attribution-ShareAlike (CC BY-SA)</option>
+                        <option value="CC BY-ND">Attribution-NoDerivs (CC BY-ND)</option>
+                        <option value="CC BY-NC">Attribution-NonCommercial (CC BY-NC)</option>
+                        <option value="CC BY-NC-SA">Attribution-NonCommercial-ShareAlike (CC BY-NC-SA)</option>
+                        <option value="CC BY-NC-ND">Attribution-NonCommercial-NoDerivs (CC BY-NC-ND)</option>
+                        <option value="Public Domain">Public Domain (General)</option>
+                        <option value="Public Domain, CC0">Public Domain (CC0)</option>
+
+                    </select>
+                    <div title="version" class="section-subarea">
+                        Version
+                        <select name="Version" id="VersionDropDown" disabled>
+                            <option selected>4.0</option>
+                            <option>3.0</option>
+                            <option>2.5</option>
+                            <option>2.0</option>
+                            <option>1.0</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br />
+                <div title="Derivative" onchange="changeDerivative();">
+                    <input type="checkbox" id="DerivativeCheckBox" name="Derivative" />
+                    <label for="DerivativeCheckBox">This work is a derivative</label>
+                    <a href="#" id="Derivative" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                    <div class="popup" id="popup_Derivative">
+                        <div id="Derivative_popup" class="popup_value"></div>
+                        <div class="closeButton">
+                            <a href="#">X</a>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="section-subarea">
+                        URL:
+                        <input name="Derivative" id="DerivativeTextBox" size="30" value="" placeholder="URL of original work" type="text" disabled />
+                        <br />
+                        <span id="DerivUrlPrompt" class="field-prompt" style="display:none;">Please enter a valid URL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="leftContainer">
+                <div title="Title" onchange="changeTitle();">
+                    <div class="section-title">
+                        Title
+                        <a href="#" id="Title" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                        <span id="ItemUrlPrompt" class="field-prompt" style="display:none;">Please enter a valid URL</span>
+                        <div class="popup" id="popup_Title">
+                            <div id="Title_popup" class="popup_value"></div>
+                            <div class="closeButton">
+                                <a href="#">X</a>
+                            </div>
+                        </div>
+                    </div>
+                    <input name="title" id="titleTextBox" size="40" class="required" value="" placeholder="Content Item Title" type="text" onkeyup="onchangevalue(this);" />
+                    <div class="section-subarea">
+                        URL:
+                        <input name="title_URL" id="titleURLTextBox" size="34" class="required right" value="" placeholder="URL of the content item" type="text" />
+                    </div>
+                </div>
+                <div title="Author" onchange="changeAuthor();">
+                    <div class="section-title">
+                        Author
+                        <a href="#" id="Author" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                        <span id="AuthorUrlPrompt" class="field-prompt" style="display:none;">Please enter a valid URL</span>
+                        <div class="popup" id="popup_Author">
+                            <div id="Author_popup" class="popup_value"></div>
+                            <div class="closeButton">
+                                <a href="#">X</a>
+                            </div>
+                        </div>
+                    </div>
+                    <input name="author_name" id="authornameTextBox" class="required" size="40" value="" placeholder="Author name" type="text" onkeyup="onchangevalue(this);" />
+                    <div class="section-subarea">
+                        URL:
+                        <input name="author_URL" id="authorURLTextBox" class="required right" size="34" value="" placeholder="URL of the author page" type="text" />
+                    </div>
+                </div>
+                <div id="collapsible-panels">
+                    <div title="Organization" onchange="changeOrganization();">
+                        <div class="section-title">
+                            <span class="collapsecontent">Organization</span>
+                            <a href="#" id="Organization" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                            <span id="OrgUrlPrompt" class="field-prompt" style="display:none;">Please enter a valid URL</span>
+                            <div class="popup" id="popup_Organization">
+                                <div id="Organization_popup" class="popup_value"></div>
+                                <div class="closeButton">
+                                    <a href="#">X</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hide">
+                            <input name="Organization" id="OrganizationTextBox" size="40" placeholder="Org name" type="text" onkeyup="onchangevalue(this);" />
+                            <div class="section-subarea">
+                                URL:
+                                <input name="Organizatione_URL" id="OrganizationURLTextBox" size="34" class="right" placeholder="URL of the Organization" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                    <div title="Project" onchange="changeProject();">
+                        <div class="section-title">
+                            <span class="collapsecontent">
+                                Project
+                            </span>
+                            <a href="#" id="Project" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                            <span id="ProjectUrlPrompt" class="field-prompt" style="display:none;">Please enter a valid URL</span>
+                            <div class="popup" id="popup_Project">
+                                <div id="Project_popup" class="popup_value"></div>
+                                <div class="closeButton">
+                                    <a href="#">X</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hide">
+                            <input name="Project" id="ProjectTextBox" size="40" placeholder="Project name" type="text" onkeyup="onchangevalue(this);" />
+                            <div class="section-subarea">
+                                URL:
+                                <input name="project_URL" id="ProjectURLTextBox" size="34" class="right" placeholder="URL of the Project" type="text" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="section-title">
+                Attribution
+                <a href="#" id="Attribution" class="tooltip_display"><img class="helpimg" src="images/help_flat_2.png" /></a>
+                <div class="popup" id="popup_Attribution">
+                    <div id="Attribution_popup" class="popup_value"></div>
+                    <div class="closeButton">
+                        <a href="#">X</a>
+                    </div>
+                </div>
+                <span style="float:right;" class="control-links"><a href="#" id="reset-form" onclick="onloadform()">clear and start over</a></span>
+            </div>
+            <div id="attrib-output">
+                <span id="output" class="outputbox" onclick="SelectText(this.id);"></span>
+                <div id="output-html-outer">
+                    <input id="output-html" onclick="SelectAll(this.id);" readonly>
+                </div>
+            </div>
+
+        </div> <!-- End of app container -->
+
+        <div id="attrib-footer">
+            <div id="attrib-footer-content">
+                <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin-left:10px;" src="images/ccby.png" /></a>
+                <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Open Attribution Builder</span>
+                is licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+                Managed by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sbctc.edu" property="cc:attributionName" rel="cc:attributionURL">WA SBCTC</a>.
+                <div style="text-align:right;padding-top:5px;">Check out the <a href="http://openwa.org">Open Washington website</a> for more open educational resources</div>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

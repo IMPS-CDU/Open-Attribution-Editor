@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HelpContent>
+  <Header id="Title">
+    <content>
+      <![CDATA[
+      <header>Title Tips</header>
+      List the title of the work you’re adopting. If you can’t locate the title please enter a more general term, such as “this work”, “this image”, etc. 
+      <br/><br/>
+      Enter a URL to the original sources. If it's not available, include where you got the work. For example, in the title you might enter, "Blue Star painting from Reddit paintings".
+      ]]>
+    </content>
+  </Header>
+  <Header id="Author">
+    <content>
+      <![CDATA[
+      <header>Author Tips</header>
+      Name the author(s) of the material you are adopting. If you can’t locate the name, you can list the author’s screen or username. 
+      <br/><br/>
+      Sometimes an organization is the copyright holder and does not provide any author information. In such cases, use the organization name as the author. Alternately, you can leave the author field empty and fill in the organization field.
+      <br/><br/>
+      If the author notes another person or entity they’d like to give credit, please do so. Also, if available, enter the URL to the author’s webpage or user account page.
+      ]]>
+    </content>
+  </Header>
+  <Header id="Organization">
+    <content>
+      <![CDATA[
+      <header>Organization Tips</header>
+      If available, add the name of the organization that sponsored or managed the work you are adopting;  it’s always nice to acknowledge those entities for their contribution. For example, the Open Course Library project was funded and managed by the Washington State Board for Community and Technical Colleges. 
+      ]]>    
+    </content>
+  </Header>
+  <Header id="Project">
+    <content>
+      <![CDATA[
+      <header>Project Tips</header>
+      If available, add the name of the project from which the work was created. For example, Open Learning Initiative is the name of the project managed by Carnegie Mellon University.
+      ]]>
+    </content>
+  </Header>
+  <Header id="License">
+    <content>
+    <![CDATA[
+    <header>License Tips</header>
+      Choose the exact Creative Commons license given to the work you’re adopting. 
+      <br/><br/>
+      If the work is in the public domain, you have the option of noting whether it’s in the general public domain (general) or if it’s officially released under the Creative Commons public domain (CC0).
+      ]]>
+  </content>
+  </Header>
+  <Header id="Attribution">
+    <content>
+    <![CDATA[
+    <header>Using your attribution</header>
+    Copy and paste the text attribution or the html into your material. 
+    ]]>
+  </content>
+  </Header>
+  <Header id="About">
+    <content>
+      <![CDATA[    
+      <header>About Open Attribution Builder</header>
+      <strong>This application is:</strong>
+      <ul>
+      <li>to help you easily cite open material you find; as you fill out the form the application will automatically generate the attribution for you.</li>
+      <li>to cite only openly distributed work, such as work licensed by Creative Commons or released in the public domain.</li>
+      <li>to provide a default attribution statement. You’re welcome to modify the citation to make it more suitable to your needs.</li>
+      </ul>
+      <strong>This application is NOT:</strong>
+      <ul>
+      <li>to mark your own work with a Creative Commons license or to place your work in the public domain. To do so, please use the <a href="http://creativecommons.org/choose">license chooser</a> (for the CC licensed work) or <a href="https://creativecommons.org/choose/zero/waiver">CC0 Waiver</a> (for the public domain work) provided by Creative Commons.</li>
+      <li>applicable for all types of materials; this application is only for openly released work.</li>
+      </ul>
+      <br/>
+      This application lets you enter information for title, author, license, organization, and project. You are not required to enter all information to have a citation generated. Click the ? icons to learn more about each area.
+      <br/><br/>
+       
+    ]]>
+    </content>
+  </Header>
+  <Header id="Derivative">
+    <content>
+      <![CDATA[    
+      <header>Derivative Tips</header>
+     If you are attributing a work based on or derived from existing works, please add a link to the original.
+    ]]>
+    </content>
+  </Header>
+</HelpContent>
