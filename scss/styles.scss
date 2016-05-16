@@ -1,8 +1,9 @@
 /* OPEN Attribution Builder stylesheet 
 */
 
-$header-bg-color: #8ebac8;
-$header-bg-gradient-end: darken(desaturate(adjust-hue($header-bg-color, -0.8979), 13.2387), 15.8824);
+$header-bg-color: #003359;
+$header-height: 45px;
+$header-bg-gradient-end: darken(desaturate(adjust-hue($header-bg-color, -0.8979), 13.2387), 5.8824);
 $header-color: white;
 $container-bg-color: #dde1e2;
 $attrib-bg-color:#7c8d93;
@@ -43,16 +44,15 @@ body {
     background-color: $header-bg-color;
     background:linear-gradient(to right, $header-bg-color, $header-bg-gradient-end); 
     margin: 5px 0 5px 0;    
-    height: 45px;
+    height: $header-height;
     border-radius: 6px;
     max-width: $width * 1.025;
 }
 
 #attrib-header-logo {
-    height:55px;
-    width:80px;
-    margin: -5px 0 0 -5px;
-    padding-right: 5px;
+    height: $header-height;
+		box-sizing: border-box;
+		padding: 7px;
     float:left;
 }
 
@@ -65,6 +65,7 @@ body {
     float:left;    
     margin: 0 0 0 5px;
     vertical-align:middle;
+		padding-left: 10px;
 }
 
 #header-right {
