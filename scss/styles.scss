@@ -1,14 +1,13 @@
-/* OPEN Attribution Builder stylesheet 
-*/
+/* OPEN Attribution Builder stylesheet*/
 
 $header-bg-color: #003359;
 $header-height: 45px;
 $header-bg-gradient-end: darken(desaturate(adjust-hue($header-bg-color, -0.8979), 13.2387), 5.8824);
 $header-color: white;
-$container-bg-color: #dde1e2;
-$attrib-bg-color:#7c8d93;
-$popup-bg-color: $header-bg-color;
-$control-link-color: #7C8D93;
+$container-bg-color: #CED5DD;
+$attrib-bg-color: $header-bg-color;
+$popup-bg-color: #ffffff;
+$control-link-color: black;
 $width: 800px;
 
 $font-size-large: large;
@@ -21,10 +20,8 @@ $font-size-tagline: small;
 $font-size-section-subarea: smaller;
 $font-size-output: smaller;
 
-
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 100%;
+    font-family: 'Arial', sans-serif;
     text-align: left;
 }
 
@@ -42,7 +39,6 @@ body {
 
 #attrib-header {
     background-color: $header-bg-color;
-    background:linear-gradient(to right, $header-bg-color, $header-bg-gradient-end); 
     margin: 5px 0 5px 0;    
     height: $header-height;
     border-radius: 6px;
@@ -51,21 +47,20 @@ body {
 
 #attrib-header-logo {
     height: $header-height;
-		box-sizing: border-box;
-		padding: 7px;
+	box-sizing: border-box;
+	padding: 7px;
     float:left;
 }
 
 
 #header-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: $font-size-header;
-    font-weight: 800;
     color: $header-color;
     float:left;    
     margin: 0 0 0 5px;
     vertical-align:middle;
-		padding-left: 10px;
+    padding: 5px 10px;
 }
 
 #header-right {
@@ -73,7 +68,7 @@ body {
 }
 
 #attrib-header-links {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Arial', sans-serif;
     float:right;
     margin: 18px 15px 0 10px;
     min-height:30px;
@@ -83,14 +78,12 @@ body {
     color: $header-color;
     text-decoration:none;
     font-size: $font-size-large;
-    font-weight:800;
 }
 
 .control-links a {
     color: $control-link-color;
     text-decoration:none;
     font-size: $font-size-large;
-    font-weight:800;
 }
 
 #tagline {
@@ -107,14 +100,15 @@ form {
 
 
 .section-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: $font-size-section-title;
     margin-top: 25px;
 }
 
 .section-subarea {
     font-size: $font-size-section-subarea;
-    margin-top: 4px;            
+    margin-top: 4px;
+    line-height: 2.5em;     
 }
 
 
@@ -129,7 +123,6 @@ form {
     padding-top:0px
 }
     
-
 input[type="checkbox"] {
     display: inline-block;               
 }
@@ -148,7 +141,6 @@ input[type="text"] {
     padding: 4px;
 }
 
-
 .helpimg {
      border:none; 
      margin-left:5px;
@@ -164,6 +156,7 @@ input[type="text"] {
     border-radius: 0 0 6px 6px;    
     font-size: $font-size-output;    
 }
+
 #output, #output a {
     font-size:inherit; 
     font-weight:normal;
@@ -177,19 +170,20 @@ input[type="text"] {
     min-width:50px;
     color:black; 
 }
+
 #output a {
     color:blue;
 }
 
-
 #output-html-outer {
     margin-top:15px;  
 }
+
 #output-html {
     border-radius: 6px;
     margin:10px 0 0 5px;
     padding:5px;    
-    width: 90%;
+    width: 97%;
     background-color:white;
     color:black;        
     border:0;
@@ -197,11 +191,7 @@ input[type="text"] {
     font-size: $font-size-output; 
 }
 
-
-
-
-#output .highlight
-{
+#output .highlight {
     background-color:lightblue;
     color: black;
     font-weight:600;
@@ -218,7 +208,6 @@ input[type="text"] {
     float:right;
     padding:2px 4px 0 4px;
 }
-
 
 .rightContainer {
     float: right;
@@ -238,7 +227,7 @@ input[type="text"] {
     font-size:medium;
     font-weight:600;
     top:0;
-    color: $header-color;
+    color: black;
     float: right;
     width: 01%;
 }
@@ -246,6 +235,7 @@ input[type="text"] {
 .field-prompt {
     color:orangered;
     padding-left: 10px;
+    font-size: medium;
 }
 
 #DerivUrlPrompt {
@@ -265,17 +255,16 @@ input[type="text"] {
     background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAECAYAAAC6Jt6KAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAPIgAADyIB+qfDbQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAkSURBVAiZY2RgYPjBQDz4x8jAwPCfBA3/mUhQzMDAwMBAsgYAQUUD+/oLAAsAAAAASUVORK5CYII=') /*../images/close_flat.png*/ no-repeat left;
 }
 
-
 #popup_About { 
     float:right; 
-     width: 300px;
+    width: 300px;
 }
 
 .popup {
     overflow: auto;
 	width: 100%;
     position: absolute;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: $font-size-popup;
     font-weight: normal;
     width: 240px;
@@ -283,20 +272,16 @@ input[type="text"] {
     background-color: $popup-bg-color;
     color:black;    
     padding: 10px 20px;
-    box-shadow: 0 1px 2px #303030;    
     border-radius: 8px 8px 8px 8px;
-
+    border: 1px solid #bdbdbd;
     display: none;    
     z-index: 10;
-    }
+}
 
 .popup header {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Arial', sans-serif;
     font-size: $font-size-popup-header;
-    font-weight:800;
-    /*background-color:white;*/
     padding: 0 0 8px 0;
-    color: $header-color;
-    /*border-radius: 0px 0px 0 0;*/
-    
+    color: black;
+    font-weight: 600;
 }
