@@ -1,15 +1,13 @@
-/* OPEN Attribution Builder stylesheet 
-*/
+/* OPEN Attribution Builder stylesheet*/
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 100%;
+  font-family: 'Arial', sans-serif;
   text-align: left; }
 
 .right {
   float: right; }
 
 #attrib-app-container {
-  background-color: #dde1e2;
+  background-color: #CED5DD;
   border-radius: 6px;
   margin-top: 10px;
   padding: 0 10px 10px 10px;
@@ -17,7 +15,6 @@ body {
 
 #attrib-header {
   background-color: #003359;
-  background: linear-gradient(to right, #003359, #042237);
   margin: 5px 0 5px 0;
   height: 45px;
   border-radius: 6px;
@@ -30,20 +27,19 @@ body {
   float: left; }
 
 #header-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: xx-large;
-  font-weight: 800;
   color: white;
   float: left;
   margin: 0 0 0 5px;
   vertical-align: middle;
-  padding-left: 10px; }
+  padding: 5px 10px; }
 
 #header-right {
   float: right; }
 
 #attrib-header-links {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Arial', sans-serif;
   float: right;
   margin: 18px 15px 0 10px;
   min-height: 30px; }
@@ -51,14 +47,12 @@ body {
 #attrib-header-links a {
   color: white;
   text-decoration: none;
-  font-size: large;
-  font-weight: 800; }
+  font-size: large; }
 
 .control-links a {
-  color: #7C8D93;
+  color: black;
   text-decoration: none;
-  font-size: large;
-  font-weight: 800; }
+  font-size: large; }
 
 #tagline {
   color: black;
@@ -70,13 +64,14 @@ form {
   margin: 5px 10px auto 10px; }
 
 .section-title {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: large;
   margin-top: 25px; }
 
 .section-subarea {
   font-size: smaller;
-  margin-top: 4px; }
+  margin-top: 4px;
+  line-height: 2.5em; }
 
 #attrib-footer {
   margin: 10px 10px 0 10px;
@@ -110,8 +105,8 @@ input[type="text"] {
   padding: 5px 10px;
   margin: 0;
   width: auto;
-  border: 10px solid #7c8d93;
-  background-color: #7c8d93;
+  border: 10px solid #003359;
+  background-color: #003359;
   /*color:white;   */
   border-radius: 0 0 6px 6px;
   font-size: smaller; }
@@ -138,7 +133,7 @@ input[type="text"] {
   border-radius: 6px;
   margin: 10px 0 0 5px;
   padding: 5px;
-  width: 90%;
+  width: 97%;
   background-color: white;
   color: black;
   border: 0;
@@ -176,13 +171,14 @@ input[type="text"] {
   font-size: medium;
   font-weight: 600;
   top: 0;
-  color: white;
+  color: black;
   float: right;
   width: 01%; }
 
 .field-prompt {
   color: orangered;
-  padding-left: 10px; }
+  padding-left: 10px;
+  font-size: medium; }
 
 #DerivUrlPrompt {
   font-size: medium; }
@@ -205,24 +201,22 @@ input[type="text"] {
   overflow: auto;
   width: 100%;
   position: absolute;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: small;
   font-weight: normal;
   width: 240px;
   min-height: 0px;
-  background-color: #003359;
+  background-color: #ffffff;
   color: black;
   padding: 10px 20px;
-  box-shadow: 0 1px 2px #303030;
   border-radius: 8px 8px 8px 8px;
+  border: 1px solid #bdbdbd;
   display: none;
   z-index: 10; }
 
 .popup header {
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: large;
-  font-weight: 800;
-  /*background-color:white;*/
   padding: 0 0 8px 0;
-  color: white;
-  /*border-radius: 0px 0px 0 0;*/ }
+  color: black;
+  font-weight: 600; }
