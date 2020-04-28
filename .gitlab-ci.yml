@@ -1,0 +1,52 @@
+image: node:8
+
+variables:
+  http_proxy: http://baza.cdu.edu.au:3128
+  https_proxy: http://baza.cdu.edu.au:3128
+
+stages:
+  - deploy
+
+before_script:
+  ## Install ssh-agent if not already installed
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+
+cache:
+  paths:
+    - node_modules/
+
+deploy_test:
+  stage: deploy
+  only:
+    - master
+    - staging
+  script:
+    - ssh-keyscan tocororo-test.cdu.edu.au >> ~/.ssh/known_hosts
+    - scp -r ./* bamboo@tocororo-test.cdu.edu.au:/var/www/html/oer/Open-Attribution-Editor
+  environment:
+    name: test
+
+deploy_test_manual:
+  stage: deploy
+  script:
+    - ssh-keyscan tocororo-test.cdu.edu.au >> ~/.ssh/known_hosts
+    - scp -r ./* bamboo@tocororo-test.cdu.edu.au:/var/www/html/oer/Open-Attribution-Editor
+  when: manual
+  environment:
+    name: test
+
+deploy_prod:
+  stage: deploy
+  only:
+    - master
+  script:
+    - ssh-keyscan tocororo.cdu.edu.au >> ~/.ssh/known_hosts
+    - scp -r ./* bamboo@tocororo-test.cdu.edu.au:/var/www/html/oer/Open-Attribution-Editor
+  when: manual
+  environment:
+    name: production
